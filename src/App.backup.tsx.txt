@@ -1,0 +1,338 @@
+import { useState } from 'react'
+import BackgroundImage from './IMG_9914.jpg';
+import DayonesImage from './IMG_9916.jpg';
+import I$EEImage from './IMG_9917.jpg';
+import PURPOSE from './IMG_9921.jpg';
+import AFTER from './IMG_9922.jpg';
+import PEACE from './IMG_9923.jpg';
+import MIA from './IMG_9919.jpg';
+import NOMORE from './IMG_9926.jpg';
+import BEEN from './IMG_9927.jpg';
+import WHO from './IMG_9924.jpg';
+import purposeV from './IMG_9928.jpg';
+import NMV from './IMG_9929.jpg';
+import FOREVER from './IMG_9930.jpg';
+import VSNRY from './vsnry.jpg';
+import LOGO from './MakLogo.png';
+
+function App() {
+  const [email, setEmail] = useState('')
+
+  const albumsData = [
+    {
+      title: "AFTER FOREVER END$",
+      image: AFTER,
+      link: "https://www.youtube.com/watch?v=CJfCsy_ZJQ4&list=PL6SnQlrT4bBey9GWtbDK2sQlKmmOHyijO"
+    },
+    {
+      title: "PURPOSE",
+      image: PURPOSE,
+      link: " "
+    },
+    {
+      title: "PEACE AND PROGRESSION",
+      image: PEACE,
+      link: " "
+    }
+  ]
+
+  const videosData = [
+    {
+      title: "I $EE LYRICAL VIDEO ",
+      image: BackgroundImage,
+      link: "https://www.youtube.com/watch?v=Jd13G3CS0Ec"
+    },
+    {
+      title: "WHO TOLD YOU(VI$UALIZER)",
+      image: WHO,
+      link: "https://youtu.be/xDhvUmZJn5Q?si=6X8-BxDa3SANSzhx"
+    },
+    {
+      title: "NO MORE(VI$UALIZER)",
+      image: NOMORE,
+      link: "https://youtu.be/YISg5x1zHbA?si=Nh-MU-BoNeknVhUA"
+    },
+    {
+      title: "BEEN A WHILE(VI$UALIZER)",
+      image: BEEN,
+      link: "https://youtu.be/8eFeBe8Q-gg?si=j-PL30UA0lYr1DMM"
+    },
+    {
+      title: "NO MORE (OFFICAL MUSIC VIDEO)",
+      image: NMV,
+      link: "https://youtu.be/5F17A8B34MA?si=sub9jcALsZ8QbMDq"
+    },
+    {
+      title: "MIDDLE(VI$UALIZER)",
+      image: FOREVER,
+      link: "https://youtu.be/NY1yyqnDmWE?si=N1AlEt5mmS1sMSGd"
+    },
+    {
+      title: "PURPOSE(TRAILER)",
+      image: purposeV,
+      link: "https://youtu.be/ztM4feClu9Y?si=U4L_n3VBqQuOoURy"
+    },
+
+   
+  ]
+
+  const socialLinks = [
+    { name: 'TikTok', url: '', icon: 'https://ext.same-assets.com/299769418/1150337314.svg' },
+    { name: 'Instagram', url: 'https://www.instagram.com/onlymakhaya', icon: 'https://ext.same-assets.com/299769418/3355297466.svg' },
+    { name: 'X', url: 'https://x.com/onlymakhaya', icon: 'https://ext.same-assets.com/299769418/541901602.svg' },
+    { name: 'Youtube', url: 'https://www.youtube.com/@onlymakhaya/videos', icon: 'https://ext.same-assets.com/299769418/2338996388.svg' },
+    { name: 'Spotify', url: 'https://open.spotify.com/track/0F7L0bfZKHg1swypMNDgT0?si=39336024874742c7', icon: 'https://ext.same-assets.com/299769418/938119104.svg' },
+    { name: 'Apple', url: 'https://music.apple.com/za/artist/only-makhaya/1765305449', icon: 'https://ext.same-assets.com/299769418/3209070856.svg' }
+
+  ]
+
+  const handleEmailSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    alert('Thank you for subscribing!')
+    setEmail('')
+  }
+
+  return (
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Navigation */}
+      <nav className="bg-red-600 px-4 py-3">
+        <div className="flex justify-center space-x-8">
+          <a href="#music" className="text-white font-bold text-sm hover:opacity-80 transition-opacity">
+            ONLY MAKHAYA'S WORLD I GUESS 
+          </a>
+
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section
+        className="relative h-screen bg-cover bg-center bg-no-repeat flex items-center"
+        style={{
+          backgroundImage: `url(${BackgroundImage})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40" />
+        <div className="relative z-10 w-full">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="bg-red-600 text-white px-6 py-2 inline-block text-sm font-bold mb-4">
+              NEW SINGLE
+            </div>
+            <h1 className="text-8xl font-bold mb-8 tracking-wider">I $EE</h1>
+            <a
+              href="https://li.sten.to/onlymakhayaisee"
+              className="border-2 border-white text-white px-8 py-3 font-bold text-sm hover:bg-white hover:text-black transition-colors inline-block"
+            >
+              LISTEN NOW
+            </a>
+          </div>
+        </div>
+      </section>
+{/* MIA Single Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="bg-red-600 text-white px-6 py-2 inline-block text-sm font-bold mb-4">
+            SINGLE
+          </div>
+          <img src={MIA}
+        alt="I $EE"
+        className="mx-auto mb-6 w-full max-w-md rounded-lg shadow-lg"
+        />
+          <h2 className="text-6xl font-bold mb-8">MIA</h2>
+          <a
+            href="https://li.sten.to/onlymakhayaisee"
+            className="border-2 border-white text-white px-8 py-3 font-bold text-sm hover:bg-white hover:text-black transition-colors inline-block mr-4"
+          >
+            LISTEN NOW
+          </a>
+        </div>
+      </section>
+        {/* DAY ONES Section */}
+      <section className="py-20 px-4 bg-gray-900">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-6xl font-bold mb-4">DAY ONE$</h2>
+          <img src={DayonesImage}
+        alt="I $EE"
+        className="mx-auto mb-6 w-full max-w-md rounded-lg shadow-lg"
+        />
+          <div className="space-x-4">
+            <a
+              href="https://li.sten.to/dayones"
+              className="border-2 border-white text-white px-8 py-3 font-bold text-sm hover:bg-white hover:text-black transition-colors inline-block"
+            >
+              LISTEN NOW
+            </a>
+            <a
+              href="https://youtu.be/VPlNz-_jpjc?si=N6a4mH2gIpynPm79"
+              className="border-2 border-white text-white px-8 py-3 font-bold text-sm hover:bg-white hover:text-black transition-colors inline-block"
+            >
+              WATCH NOW
+            </a>
+          </div>
+        </div>
+      </section>
+      {/* ISEE Single Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="bg-red-600 text-white px-6 py-2 inline-block text-sm font-bold mb-4">
+            THE NEWEST SINGLE
+          </div>
+          <img src={I$EEImage}
+        alt="I $EE"
+        className="mx-auto mb-6 w-full max-w-md rounded-lg shadow-lg"
+        />
+          <h2 className="text-6xl font-bold mb-8">I $EE</h2>
+          <a
+            href="https://li.sten.to/onlymakhayaisee"
+            className="border-2 border-white text-white px-8 py-3 font-bold text-sm hover:bg-white hover:text-black transition-colors inline-block mr-4"
+          >
+            LISTEN NOW
+          </a>
+        </div>
+      </section>
+      
+
+      {/* More Music Section */}
+      <section id="music" className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold mb-12">MORE MUSIC FROM ONLY MAKHAYA</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {albumsData.map((album) => (
+              <div key={album.title} className="group cursor-pointer">
+                <div className="relative overflow-hidden mb-4">
+                  <img
+                    src={album.image}
+                    alt={album.title}
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <a
+                      href={album.link}
+                      className="border-2 border-white text-white px-6 py-2 font-bold text-sm hover:bg-white hover:text-black transition-colors"
+                    >
+                      LISTEN NOW
+                    </a>
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold">{album.title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* More Videos Section */}
+      <section id="video" className="py-20 px-4 bg-gray-900">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold mb-12">MORE VIDEOS FROM ONLY MAKHAYA</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {videosData.map((video, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="relative overflow-hidden mb-4">
+                  <img
+                    src={video.image}
+                    alt={video.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <a
+                    href={video.link}
+                     //href={`https://www.youtube.com/watch?v=${video.link}`}
+                      className="border-2 border-white text-white px-6 py-2 font-bold text-sm hover:bg-white hover:text-black transition-colors"
+                    >
+                      WATCH NOW
+                    </a>
+                  </div>
+                  <div className="absolute bottom-2 left-2">
+                    <img src="https://ext.same-assets.com/299769418/2338996388.svg" alt="YouTube" className="w-8 h-8" />
+                  </div>
+                </div>
+                <h3 className="text-sm font-bold uppercase">{video.title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Live on Tour Section */}
+      <section id="tour" className="py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-6xl font-bold mb-8">LIVE YOURZ</h2>
+          <p className="text-lg mb-12 text-gray-400">
+             NO EVENTS SCHEDULED.
+          </p>
+        </div>
+      </section>
+
+      {/* Email Signup Section */}
+      <section className="py-20 px-4 bg-gray-900">
+        <div className="max-w-2xl mx-auto text-center">
+          <form onSubmit={handleEmailSubmit} className="flex max-w-md mx-auto">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="EMAIL ADDRESS"
+              className="flex-1 bg-black border border-gray-600 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-white"
+              required
+            />
+            <button
+              type="submit"
+              className="bg-white text-black px-8 py-3 font-bold text-sm hover:bg-gray-200 transition-colors"
+            >
+              JOIN
+            </button>
+          </form>
+          <p className="text-xs text-gray-400 mt-4 max-w-lg mx-auto">
+           When you connect, you agree to get news and updates from V$NRY and Only Makhaya. </p>
+        </div>
+      </section>
+
+      {/* Social Media Links */}
+      <section className="py-12 px-4 border-t border-gray-800">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex justify-center space-x-6">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+              >
+                <img src={social.icon} alt={social.name} className="w-6 h-6" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 px-4 border-t border-gray-800">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="mb-30">
+            <img src={VSNRY}
+              alt=""
+              className="h-40 mx-auto mb-20"
+            />
+            <img src={LOGO}
+              alt="LOGO"
+              className="h-40 mx-auto mb-20"
+            />
+          </div>
+          <div className="text-xs text-gray-400 space-y-2">
+            <p>
+              © 2025 <a href="" className="hover:text-white">V$NRY</a>. all rights reserved.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-xs">
+              <a href="" className="hover:text-white">Terms and Conditions</a>
+              <a href="" className="hover:text-white">Privacy Policy</a>
+              <a href="" className="hover:text-white">Send Us Feedback</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+export default App
